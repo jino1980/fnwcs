@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="simple" targetRuntime="MyBatis3simple">
+		<jdbcConnection
+			connectionURL="jdbc:sqlserver://127.0.0.1:1433;databaseName=FN_WCS_DB"
+			driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" password="fn_pass"
+			userId="FN_USER" />
+
+		<javaModelGenerator
+			targetPackage="com.fnwcs.pda.app.model"
+			targetProject="fnWCSPDA">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator 
+			targetPackage="com.fnwcs.pda.app.mapper"
+			targetProject="fnWCSPDA" />
+
+		<javaClientGenerator
+			targetPackage="com.fnwcs.pda.app.dao" 
+			targetProject="fnWCSPDA"
+			type="XMLMAPPER" />
+
+		<table tableName="DB_COM_CFG" />
+		<table tableName="DB_COM_CODE" />
+		<table tableName="DB_COM_EQUCOM" />
+		<table tableName="DB_COM_MNUMST" />
+		<table tableName="DB_COM_USRAUT" />
+		<table tableName="DB_COM_USRMST" />
+		<table tableName="DB_CRC_JOBMST" />
+		<table tableName="DB_STO_STODTL" />
+		<table tableName="DB_STO_STOMST" />
+		<table tableName="DB_SYS_CLCHST" />
+		<table tableName="DB_SYS_ERRLOG" />
+		<table tableName="DB_SYS_JOBHST" />
+		<table tableName="DB_SYS_JOBMST" />
+		<table tableName="DB_SYS_SYSLOG" />
+		<table tableName="IF_WCS_01" />
+		<table tableName="IF_WCS_02" />
+		<table tableName="IF_WCS_10" />
+		<table tableName="IF_WCS_11" />
+		<table tableName="IF_WCS_12" />
+		<table tableName="IF_WCS_14" />
+		<table tableName="IF_WCS_15" />
+		<table tableName="IF_WCS_16" />
+	</context>
+</generatorConfiguration>
